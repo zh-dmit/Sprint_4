@@ -1,35 +1,18 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.MainPageObject;
-import org.junit.After;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class ChecksMainPageTest {
+public class ChecksMainPageTest extends BaseTestCase {
 
-    private final WebDriver driver;
     private final int itemIndex;
     private final String expectedText;
-
-    @BeforeClass
-    public static void beforeClass() {
-        WebDriverManager.chromedriver().setup();
-        //WebDriverManager.firefoxdriver().setup();
-    }
 
     public ChecksMainPageTest(int itemIndex, String expectedText) {
         this.itemIndex = itemIndex;
         this.expectedText = expectedText;
-        driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
-        driver.get("https://qa-scooter.praktikum-services.ru/");
     }
 
     @Parameterized.Parameters
@@ -51,10 +34,5 @@ public class ChecksMainPageTest {
         MainPageObject mainPage = new MainPageObject(driver);
         String actualText = mainPage.getAccordionPanelText(itemIndex);
         assertEquals(expectedText, actualText);
-    }
-
-    @After
-    public void closeDriver() {
-        driver.quit();
     }
 }

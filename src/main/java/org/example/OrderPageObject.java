@@ -87,7 +87,7 @@ public class OrderPageObject extends BasePageObject {
     public void setColourSelect(String colour) {
         if (Objects.equals(colour, "чёрный жемчуг")) {
             driver.findElement(colourSelectBlack).click();
-        }
+        } else
         if (Objects.equals(colour, "серая безысходность")) {
             driver.findElement(colourSelectGrey).click();
         } else
@@ -107,7 +107,7 @@ public class OrderPageObject extends BasePageObject {
         if (Objects.equals(rental, "сутки")) {
             driver.findElement(rentalTime).click();
             driver.findElement(oneDaySelect).click();
-        }
+        } else
         if (Objects.equals(rental, "двое суток")) {
             driver.findElement(rentalTime).click();
             driver.findElement(twoDaysSelect).click();

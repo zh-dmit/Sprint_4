@@ -3,7 +3,6 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import java.util.Objects;
 
 public class MainPageObject extends BasePageObject {
@@ -19,7 +18,7 @@ public class MainPageObject extends BasePageObject {
     //Кнопка заказа вверху страницы
     private final By orderButtonUp = By.xpath(".//button[@class='Button_Button__ra12g']");
 
-    public MainPageObject(WebDriver driver) {
+    public MainPageObject (WebDriver driver) {
         super(driver);
     }
 

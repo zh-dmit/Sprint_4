@@ -1,35 +1,23 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.MainPageObject;
 import org.example.OrderPageObject;
-import org.junit.After;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 @RunWith(Parameterized.class)
-public class ChecksOrderPageTest {
+public class ChecksOrderPageTest extends BaseTestCase {
 
-    private final WebDriver driver;
-    String positionButton;
-    String name;
-    String secondName;
-    String address;
-    String metro = "Войковская";
-    String phoneNumber;
-    String date;
-    String rentalTime;
-    String colour;
-    String comment;
-
-    @BeforeClass
-    public static void beforeClass() {
-        WebDriverManager.chromedriver().setup();
-        //WebDriverManager.firefoxdriver().setup();
-    }
+    private final String positionButton;
+    private final String name;
+    private final String secondName;
+    private final String address;
+    private final String metro;
+    private final String phoneNumber;
+    private final String date;
+    private final String rentalTime;
+    private final String colour;
+    private final String comment;
 
     public ChecksOrderPageTest(String positionButton, String name, String secondName, String address, String metro, String phoneNumber, String date, String rentalTime, String colour, String comment) {
         this.positionButton = positionButton;
@@ -42,9 +30,6 @@ public class ChecksOrderPageTest {
         this.rentalTime = rentalTime;
         this.colour = colour;
         this.comment = comment;
-        driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
-        driver.get("https://qa-scooter.praktikum-services.ru/");
     }
 
     @Parameterized.Parameters
@@ -74,10 +59,5 @@ public class ChecksOrderPageTest {
         orderPage.clickOrderButton();
         orderPage.clickConfirmOrderButton();
         orderPage.checkSuccessfulOrder();
-    }
-
-    @After
-    public void closeDriver() {
-        driver.quit();
     }
 }
