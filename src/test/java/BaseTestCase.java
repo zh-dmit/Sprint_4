@@ -8,8 +8,8 @@ public class BaseTestCase {
     private final String testURL = "https://qa-scooter.praktikum-services.ru/";
 
     public BaseTestCase() {
-        driver = new FirefoxDriver();
-        //driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.get(testURL);
     }
 

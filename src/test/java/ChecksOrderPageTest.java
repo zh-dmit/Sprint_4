@@ -3,7 +3,6 @@ import org.example.OrderPageObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
 
 @RunWith(Parameterized.class)
 public class ChecksOrderPageTest extends BaseTestCase {
