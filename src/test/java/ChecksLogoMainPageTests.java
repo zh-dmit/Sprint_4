@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+
 
 public class ChecksLogoMainPageTests extends BaseTestCase {
 
@@ -23,12 +23,7 @@ public class ChecksLogoMainPageTests extends BaseTestCase {
         Object[] windowHandles = driver.getWindowHandles().toArray();
         driver.switchTo().window((String) windowHandles[1]);
 
-        try {
-            new WebDriverWait(driver, duration).until(ExpectedConditions.visibilityOfElementLocated(dzenSearchButton));
-        } catch (Exception e) {
-            System.out.println("Ошибка видимости элемента на странице дзен: " + e.getLocalizedMessage());
-            fail();
-        }
+        new WebDriverWait(driver, duration).until(ExpectedConditions.visibilityOfElementLocated(dzenSearchButton));
 
         assertEquals("Ошибка: нажатие на лого яндекс, не открывает страницу дзен.", "https://dzen.ru/?yredirect=true", driver.getCurrentUrl());
     }

@@ -7,8 +7,8 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class ChecksMainPageTest extends BaseTestCase {
 
-    private final int itemIndex;
-    private final String expectedText;
+    int itemIndex;
+    String expectedText;
 
     public ChecksMainPageTest(int itemIndex, String expectedText) {
         this.itemIndex = itemIndex;
