@@ -12,9 +12,9 @@ import static org.junit.Assert.assertEquals;
 
 public class ChecksErrorForOrderTests extends BaseTestCase {
 
-    MainPageObject mainPage = new MainPageObject(driver);
-    OrderPageObject orderPage = new OrderPageObject(driver);
-    Duration duration = Duration.ofSeconds(10);
+    private MainPageObject mainPage = new MainPageObject(driver);
+    private OrderPageObject orderPage = new OrderPageObject(driver);
+    private Duration duration = Duration.ofSeconds(10);
 
     @Test
     public void checksErrorForOrderFieldPageWhoIsTheScooterFor() {

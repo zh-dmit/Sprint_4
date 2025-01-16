@@ -11,8 +11,8 @@ import static org.junit.Assert.assertEquals;
 
 public class ChecksLogoMainPageTests extends BaseTestCase {
 
-    MainPageObject mainPage = new MainPageObject(driver);
-    Duration duration = Duration.ofSeconds(10);
+    private MainPageObject mainPage = new MainPageObject(driver);
+    private Duration duration = Duration.ofSeconds(10);
 
     @Test
     public void checkRedirectFromYandexLogoToDzenPage() {

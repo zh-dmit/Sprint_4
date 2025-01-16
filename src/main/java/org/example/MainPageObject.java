@@ -23,7 +23,7 @@ public class MainPageObject extends BasePageObject {
     //Поле ввода номера заказа
     private final By inputOrderNumberField = By.xpath(".//input[@class='Input_Input__1iN_Z Header_Input__xIoUq']");
     //Кнопка проверки номера заказа
-    private final By buttonCheckOrder = By.xpath(".//button[@class='Button_Button__ra12g Header_Button__28dPO']");
+    private final By buttonCheckOrder = By.xpath(".//button[@class='Button_Button__ra12g Header_Button__28dPO' and text()='Go!']");
     //Картинка заказ не найден
     private final By imgOrderNotFound = By.xpath(".//img[@alt='Not found']");
 

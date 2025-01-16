@@ -7,16 +7,16 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class ChecksOrderPageTest extends BaseTestCase {
 
-    String positionButton;
-    String name;
-    String secondName;
-    String address;
-    String metro;
-    String phoneNumber;
-    String date;
-    String rentalTime;
-    String colour;
-    String comment;
+    private String positionButton;
+    private String name;
+    private String secondName;
+    private String address;
+    private String metro;
+    private String phoneNumber;
+    private String date;
+    private String rentalTime;
+    private String colour;
+    private String comment;
 
     public ChecksOrderPageTest(String positionButton, String name, String secondName, String address, String metro, String phoneNumber, String date, String rentalTime, String colour, String comment) {
         this.positionButton = positionButton;
